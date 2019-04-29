@@ -1,0 +1,116 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+nav {
+    position: fixed;
+    top: 0;
+    height: 8vh;
+    min-height: 64px;
+    width: 100vw;
+    z-index: 1;
+    @include flex($justify-content: null, $align-items: null);
+
+    &.displayNavBackground {
+        background-color: $background-color-nav-header;
+
+        animation-name: fade-in;
+        animation-duration: 0;
+        animation-timing-function: ease-in;
+
+        @keyframes fade-in {
+            0% { opacity: 0;}
+            100% { opacity: 1;}
+        }
+    }
+
+    .app-header {
+        // @include flex-basis(12%);
+        max-width: 500px;
+        margin-right: 5vw;
+        background-color: $background-color-nav-app-header;
+        @include flex($justify-content: null);
+
+        &.displayNavBackground {
+            background-color: $background-color-nav-header-on-scroll;
+        }
+
+        img {
+            height: 100%;
+            margin-left: 0.5vw;
+            margin-right: 1vw;
+        }
+
+        p {
+            @include flex($flex-direction: column);
+            margin-left: 1vw;
+            margin-right: 2vw;
+            color: black;
+            font-size: $font-size-nav-app-header;
+            font-weight: 700;
+
+            // span {
+            //     color: $color-nav-app-header;
+            //     font-size: $font-size-nav-app-header;
+            //     font-weight: 700;
+            // }
+        }
+
+    }
+
+    .links {
+        @include flex-basis(60%);
+        @include flex($justify-content: null, $align-items: null);
+
+        a.nav-link {
+            height: 8vh;
+            min-height: 64px;
+            min-width: 64px;
+            width: 8vh;
+            margin-right: 1vw;
+    
+            .nav-link-inner {
+                height: 100%;
+                width: 100%;
+                min-height: 64px;
+                min-width: 64px;
+                // background-image: $background-image-nav-header-main-links;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include flex($flex-direction: column);                
+                text-align: center;         // Needed for when label goes over 2 lines
+        
+                span {
+                    font-size: $font-size-nav-header-main-links;
+                    color: $color-nav-header-main-links;
+                    font-weight: 700;
+                    line-height: 1.1;
+                }
+
+                &:hover { transform: scale(1.1); }
+            }
+        }
+    }    
+
+}
+
+
+#main {
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    transition: margin-left 0.5s;
+}
+
+@media screen and (max-width:900px) {
+    // nav .app-header p {display: none;}
+}
+
+@media screen and (max-width:650px) {
+    // .navbar-nav {display: none};
+}
+
+@media screen and (min-width:650px) {
+    // .open-slide {display: none};
+}

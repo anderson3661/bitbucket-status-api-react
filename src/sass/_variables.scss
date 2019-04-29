@@ -1,0 +1,65 @@
+// ***************** General ****************
+$font-family-main: Arial, Helvetica, sans-serif;
+$background-color-main-body: black;
+$line-height-main-body: 1.0;
+
+
+// ************* Container Card *************
+$color-container-card: black;
+$background-color-container-card: rgba(255, 255, 255, 0.95);
+// $background-color-container-card: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgba(210, 210, 210, 0.95) 100%);
+$background-color-container-card-not-at-this-stage: rgba(253, 229, 92, 0.9);
+$box-shadow-color-container-card: rgba(0, 0, 0, 0.5);
+$background-color-container-card-information: rgba(240, 248, 255, 0.95);
+
+
+// *************** API Status ***************
+$color-status-indicator-none: green;
+$color-status-indicator-minor: orange;
+$color-status-indicator-major: darkred;
+$color-status-indicator-critical: red;
+
+
+// ***************** Links ******************
+$color-link: blue;
+
+
+// ***************** Header *****************
+$font-size-nav-app-header: 130%;
+$font-size-nav-header-main-links: 88%;
+$color-nav-app-header: white;
+$color-nav-header-main-links: blue;
+$background-color-nav-header: rgba(0, 0, 0, 0.9);
+// $background-color-nav-app-header: rgba(255, 255, 255, 0.3);
+$background-color-nav-app-header: rgba(58, 57, 57, 0.3);
+$background-color-nav-header-on-scroll: rgba(0, 0, 0, 0.9);
+
+
+// ***************** Footer *****************
+$color-main-footer: white;
+$background-color-main-footer: #4C4C4C;
+
+
+// ****************** Home ******************
+$font-size-home-links: 110%;
+$color-home-links: blue;
+$color-home-links-inactive: gray;
+
+
+// ********************** Help ***********************
+$color-help-form: black;
+$color-accordian-title: white;
+$background-help-form: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(203, 203, 204) 100%);
+$background-color-accordian: white;
+$background-color-accordian-title: #296e75;             // or #00b3b4;
+$background-color-accordian-title-hover: #338A94;       // or #0bbfc0;
+$border-accordian-title: 1px solid #2b7981;             // or 1px solid #379AA4;
+$border-accordian: 1px solid darkgray;                  // or 1px solid #e0e0e0;
+$border-accordian-title-arrow:  2px solid white;
+$box-shadow-accordian-title: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(255,255,255,0.1) inset, 0 4px 0 #276c74, 0 4px 2px rgba(0,0,0,0.5);      // or #338A94 instead of #276c74
+
+
+// ********************* Contact *********************
+$color-contact-form: black;
+$color-contact-form-invalid-message: red;
+$background-contact-form: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(203, 203, 204) 100%);

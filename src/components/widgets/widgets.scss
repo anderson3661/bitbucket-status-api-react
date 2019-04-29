@@ -1,0 +1,125 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+.container-widgets {
+    min-height: 70vh;
+    @include flex();
+    margin: 14vh auto 10vh auto;
+
+    .container-card {
+
+        &.status-overall, &.status-services, &.incidents-current, &.incidents-recent, &.widget-controls {
+            position: fixed;
+        }
+
+        &.status-overall {
+            top: 30vh;
+            left: 7vw;
+            width: 30vw;
+
+            p.status-indicator, p.status-description {
+                font-size: 150%;
+                font-weight: 900;
+                width: 100%;
+                text-align: center;
+                &.none { color: $color-status-indicator-none; }
+                &.minor { color: $color-status-indicator-minor; }
+                &.major { color: $color-status-indicator-major; }
+                &.critical { color: $color-status-indicator-critical; }
+            }
+
+            p.status-indicator {
+                text-transform: uppercase;
+            }
+        }
+
+        &.status-services {
+            top: 47vh;
+            left: 7vw;
+            width: 30vw;
+
+            table { width: 100%; border-collapse: collapse; }
+            tr td {
+                padding: 1.5vh 0;
+            }
+
+            td.status.operational {
+                color: green;
+            }
+
+            td.status:not(operational) {
+                color: red;
+            }
+        }
+
+        &.incidents-current {
+            top: 5vh;
+            right: 5vw;
+            width: 40vw;
+
+            span {
+                color: blue;
+                margin-left: 20px;
+            }
+        }
+
+        &.incidents-recent {
+            top: 12vh;
+            bottom: 0;
+            right: 5vw;
+            width: 40vw;
+            height: 75vh;
+            overflow: auto;
+
+            tr td { padding: 0.25vh 0; font-size: 85%; }
+        }
+
+        &.widget-controls {
+            top: 75vh;
+            left: 7vw;
+            width: 30vw;
+            background-color: lightblue;
+
+            p.last-updated span {
+                margin-left: 2vw;
+            }
+
+            .frequency span {
+                font-weight: normal;
+                margin-right: 2vw;
+            }
+        }
+
+        #tableTitleDiv {
+            width: 100%;
+        }
+
+        #tableTitle {
+            color: slategray;
+            text-align: center;
+            font-weight: 700;
+        }
+
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .container-widgets {
+        @include flex($flex-direction: column);
+        .container-card {
+            &.status-overall, &.status-services, &.incidents-current, &.incidents-recent, &.widget-controls {
+                width: 75%;
+                position: relative;
+                top: unset;
+                left: unset;
+                right: unset;
+                height: unset;
+                margin-bottom: 3vh;
+            }
+            &.incidents-recent {
+                width: 90%;
+            }
+        }
+    }
+}

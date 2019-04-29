@@ -1,0 +1,47 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+.outer-container-about {
+    min-height: 94vh;
+
+    .container-main-content-about {
+        // @include flex();
+        width: 75%;
+        margin: 13vh auto 9vh auto;
+
+        .container-card.about {
+            background-color: $background-color-container-card-information;
+            padding: 1vh 2vw 1vh 2vw;
+            margin-bottom: 3vh;
+
+            ul li span.api-endpoint {
+                font-size: 75%;
+                font-weight: normal;
+            }
+        }
+
+        .container-card.technical {
+            width: 30%;
+            background-color: $background-color-container-card-information;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .outer-container-about {
+        .container-main-content-about {
+            width: 90%;
+            ul { padding-left: 3vw; }
+            .container-card.about {
+                padding-left: 3vw;
+                padding-right: 3vw;
+            }
+            .container-card.technical {
+                width: 50%;
+            }
+        }
+    }
+}
